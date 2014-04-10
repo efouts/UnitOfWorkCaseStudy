@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Workflows]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 	
+    [Number] INT NOT NULL,
+    [Title] NVARCHAR(50) NOT NULL, 
+    [BeginStateId] UNIQUEIDENTIFIER NULL, 
+    [EndStateId] UNIQUEIDENTIFIER NULL
+)

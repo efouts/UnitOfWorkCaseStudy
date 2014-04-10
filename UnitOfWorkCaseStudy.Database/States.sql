@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[States]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [WorkflowId] UNIQUEIDENTIFIER NOT NULL,
+    [Title] NVARCHAR(50) NOT NULL, 
+    CONSTRAINT [FK_States_Workflow] FOREIGN KEY ([WorkflowId]) REFERENCES [Workflows]([Id])
+)

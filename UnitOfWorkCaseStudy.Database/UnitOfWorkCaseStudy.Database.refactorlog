@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="50091a82-c889-4ed5-8f88-8832d6a09202" ChangeDateTime="08/24/2012 13:29:53">
+    <Property Name="ElementName" Value="[dbo].[Parents-Children].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Parents-Children]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ParentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d983919a-42fc-4fa6-868f-4ddc0cbf5a9c" ChangeDateTime="11/18/2012 19:29:28">
+    <Property Name="ElementName" Value="[dbo].[Parents].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Parents]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d891339-9a4a-4d82-adc1-dabdaf6e098d" ChangeDateTime="11/18/2012 19:29:39">
+    <Property Name="ElementName" Value="[dbo].[ParentsChildren].[ParentId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ParentsChildren]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WorkflowDefinitionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3740bfac-42bc-4cd1-a82f-5f61ac5aa828" ChangeDateTime="11/18/2012 19:55:03">
+    <Property Name="ElementName" Value="[dbo].[WorkflowDefinitionsStates].[ChildId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WorkflowDefinitionsStates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce9085c7-58a9-4f9a-982b-9743a3710d09" ChangeDateTime="02/15/2013 19:18:22">
+    <Property Name="ElementName" Value="[dbo].[WorkflowFields].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WorkflowFields]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WorkflowId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="95fb2a93-11e5-49fb-ad9c-99857776711f" ChangeDateTime="02/15/2013 21:21:00">
+    <Property Name="ElementName" Value="[dbo].[StateFields].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StateFields]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="61d2b579-689d-4fb1-984e-828e51faed6b" ChangeDateTime="02/22/2013 20:26:21">
+    <Property Name="ElementName" Value="[dbo].[StateUserResponsibleParties].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StateUserResponsibleParties]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56084832-b58c-423b-8ddf-52d21440ac14" ChangeDateTime="02/22/2013 21:12:43">
+    <Property Name="ElementName" Value="[dbo].[StateFieldResponsiblyParties].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StateFieldResponsiblyParties]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="72271411-410d-496b-bf79-1d8c79c12231" ChangeDateTime="03/01/2013 18:23:42">
+    <Property Name="ElementName" Value="[dbo].[Workflows].[BeginState]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Workflows]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BeginStateId" />
+  </Operation>
+</Operations>

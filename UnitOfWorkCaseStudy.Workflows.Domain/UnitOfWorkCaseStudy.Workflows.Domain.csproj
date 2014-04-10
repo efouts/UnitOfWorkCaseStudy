@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BE299F6-6DF2-4760-B5E2-86D7A1F5E25C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitOfWorkCaseStudy.Workflows.Domain</RootNamespace>
+    <AssemblyName>UnitOfWorkCaseStudy.Workflows.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Creation\IWorkflowFactory.cs" />
+    <Compile Include="Creation\WorkflowFactory.cs" />
+    <Compile Include="Models\AggregateRoot.cs" />
+    <Compile Include="Models\StateField.cs" />
+    <Compile Include="Models\WorkflowGraph.cs" />
+    <Compile Include="Models\WorkflowExceptions.cs" />
+    <Compile Include="Models\WorkflowPath.cs" />
+    <Compile Include="Services\PublishWorkflow\IPublishWorkflowValidator.cs" />
+    <Compile Include="Services\PublishWorkflow\IncorrectBeginStateValidator.cs" />
+    <Compile Include="Services\PublishWorkflow\MultipleBeginStatesValidator.cs" />
+    <Compile Include="Services\PublishWorkflow\PublishWorkflowService.cs" />
+    <Compile Include="Services\PublishWorkflow\OrphanedStatesValidator.cs" />
+    <Compile Include="Services\PublishWorkflow\WorkflowGraphFactory.cs" />
+    <Compile Include="Services\StateProjection.cs" />
+    <Compile Include="Services\PublishWorkflow\WorkflowGraph.cs" />
+    <Compile Include="Transactions\AggregateTracker.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\IAggregateRoot.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Transition.cs" />
+    <Compile Include="Models\Workflow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\WorkflowRepository.cs" />
+    <Compile Include="Services\StateService.cs" />
+    <Compile Include="Services\WorkflowService.cs" />
+    <Compile Include="Transactions\IAggregateTracker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnitOfWorkCaseStudy.Workflows.Api\UnitOfWorkCaseStudy.Workflows.Api.csproj">
+      <Project>{f57dd0bc-47eb-4fc6-944b-86b1d44525b4}</Project>
+      <Name>UnitOfWorkCaseStudy.Workflows.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitOfWorkCaseStudy.Workflows.Infrastructure\UnitOfWorkCaseStudy.Workflows.Infrastructure.csproj">
+      <Project>{6331dc7e-05f8-4d4f-89ea-44e6bca62448}</Project>
+      <Name>UnitOfWorkCaseStudy.Workflows.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
